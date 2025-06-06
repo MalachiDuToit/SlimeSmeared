@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://54rgyrf2vk2s"]
+
+[ext_resource type="Script" uid="uid://48p4v7t1kfn1" path="res://Scripts/options.gd" id="1_5hy3q"]
+[ext_resource type="Texture2D" uid="uid://cehr45udcunqf" path="res://Assets/sprites/BackPlay.PNG" id="1_hg628"]
+[ext_resource type="FontFile" uid="uid://b2ekuk6jpqj7e" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="2_5hy3q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cbhj7"]
+texture = ExtResource("1_hg628")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5hy3q")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -322.0
+offset_right = 576.0
+offset_bottom = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_cbhj7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -305.5
+offset_top = -87.5
+offset_right = 305.5
+offset_bottom = 87.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Level1" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5hy3q")
+theme_override_font_sizes/font_size = 32
+text = "Level 1"
+
+[node name="Level2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5hy3q")
+theme_override_font_sizes/font_size = 32
+text = "Level 2"
+
+[node name="Level3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5hy3q")
+theme_override_font_sizes/font_size = 32
+text = "Level 3 (Boss Fight)"
+
+[node name="Emu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5hy3q")
+theme_override_font_sizes/font_size = 32
+text = "Emu"
+
+[connection signal="pressed" from="VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Emu" to="." method="_on_emu_pressed"]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk6and3t2csu7"]
+
+[ext_resource type="Texture2D" uid="uid://x37wpfrsgkwf" path="res://Assets/sprites/20250507_2028_Shoplifting Emu Escapade_simple_compose_01jtn4jjv9eev8k6zmx3z8qybd.png" id="1_ogtw6"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_ogtw6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(9, -336)

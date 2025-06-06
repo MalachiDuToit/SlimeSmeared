@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1i7n1e3a63bk"]
+
+[ext_resource type="AudioStream" uid="uid://5qaulmwf804k" path="res://Assets/music/ClownPierce's Official Theme Song - Updated.mp3" id="1_lieux"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_lieux")
+autoplay = true

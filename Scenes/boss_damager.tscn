@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp0vl2n64b4wm"]
+
+[ext_resource type="Script" uid="uid://7wdtjqo21nrw" path="res://Scripts/boss_damager.gd" id="1_e6dxe"]
+[ext_resource type="Texture2D" uid="uid://bts43dr5ausem" path="res://Assets/sprites/BossDamager.png" id="1_e7v4v"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e6dxe"]
+radius = 6.5
+height = 20.0
+
+[node name="ItemDamageArea" type="Area2D"]
+script = ExtResource("1_e6dxe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_e6dxe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, -1.90735e-06)
+scale = Vector2(0.0163574, 0.0163574)
+texture = ExtResource("1_e7v4v")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
