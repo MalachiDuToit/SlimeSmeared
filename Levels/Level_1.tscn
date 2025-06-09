@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bdiiqapbt86cn"]
+[gd_scene load_steps=26 format=3 uid="uid://bdiiqapbt86cn"]
 
 [ext_resource type="Script" uid="uid://bus24blcrt7yn" path="res://Scripts/game_manager2.gd" id="1_x75k1"]
 [ext_resource type="PackedScene" uid="uid://ce72ie1ato1p0" path="res://Player.tscn" id="2_wpk6a"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c7ldqm5yr1m80" path="res://Scenes/slime.tscn" id="8_6rttb"]
 [ext_resource type="PackedScene" uid="uid://bdyfuu7qww0oo" path="res://Coin2.tscn" id="9_2hgpn"]
 [ext_resource type="PackedScene" uid="uid://cabyjaerc0tf6" path="res://Scenes/power_up.tscn" id="14_nmwl1"]
+[ext_resource type="PackedScene" uid="uid://bsl31bnwqrmgd" path="res://Scenes/pause_menu.tscn" id="15_uqtfo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcayt"]
 texture = ExtResource("4_hofu3")
@@ -1151,3 +1152,11 @@ position = Vector2(-568, 73)
 
 [node name="PowerUp2" parent="." instance=ExtResource("14_nmwl1")]
 position = Vector2(1431, -237)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("15_uqtfo")]
+offset_left = -537.0
+offset_top = -40.0
+offset_right = -537.0
+offset_bottom = -40.0

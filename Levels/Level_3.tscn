@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwswkevun760g"]
+[gd_scene load_steps=12 format=3 uid="uid://cwswkevun760g"]
 
 [ext_resource type="Texture2D" uid="uid://c0rqp0flvcl15" path="res://Assets/sprites/TileMaps/world_tileset.png" id="1_a6uw1"]
 [ext_resource type="PackedScene" uid="uid://ce72ie1ato1p0" path="res://Player.tscn" id="2_02bvr"]
@@ -6,6 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://nkuvhyapn6r6" path="res://Assets/sounds/Flamefrags-Theme.mp3" id="4_girl1"]
 [ext_resource type="Texture2D" uid="uid://bokwn8fex6t87" path="res://Assets/sprites/TileMaps/layer_1.png" id="4_usv5v"]
 [ext_resource type="PackedScene" uid="uid://cp665kyp2pngy" path="res://Scenes/killzone.tscn" id="5_67bi5"]
+[ext_resource type="FontFile" uid="uid://byw0wvcjq6cor" path="res://Assets/fonts/ByteBounce.ttf" id="5_aig73"]
+[ext_resource type="PackedScene" uid="uid://bsl31bnwqrmgd" path="res://Scenes/pause_menu.tscn" id="8_c0thm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_02bvr"]
 texture = ExtResource("1_a6uw1")
@@ -206,6 +208,15 @@ position = Vector2(6.99994, 0.999992)
 scale = Vector2(1.7625, 1.94444)
 texture = ExtResource("4_usv5v")
 
+[node name="HealthDisplay" type="Label" parent="Player"]
+offset_left = -144.0
+offset_top = -81.0
+offset_right = -104.0
+offset_bottom = -58.0
+theme_override_fonts/font = ExtResource("5_aig73")
+theme_override_font_sizes/font_size = 47
+text = "10"
+
 [node name="Executioner" parent="." instance=ExtResource("3_r6nnp")]
 position = Vector2(-1750, -39)
 
@@ -215,3 +226,7 @@ position = Vector2(-112, 210)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(0, -57)
 shape = SubResource("WorldBoundaryShape2D_usv5v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("8_c0thm")]

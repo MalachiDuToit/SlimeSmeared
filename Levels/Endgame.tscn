@@ -16,8 +16,8 @@ grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 2177.0
+offset_bottom = 1282.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_cob7n")
 
 [node name="Label" type="Label" parent="."]

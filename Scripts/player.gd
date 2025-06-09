@@ -16,6 +16,7 @@ const BASE_JUMP = -305.0
 var SPEED = BASE_SPEED
 var JUMP_VELOCITY = BASE_JUMP
 
+@onready var health_display: Label = $HealthDisplay
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_hitbox: Area2D = $AttackHitbox
 @onready var enemy: Node2D = get_parent().find_child("Executioner", true, false)
@@ -110,6 +111,7 @@ func take_damage():
 
 	is_hurt = true
 	health -= 10 
+	health_display.text = str(health / 10)
 	#print("Player took damage! Health now:", health)
 
 	# --- Knockback ---
@@ -117,7 +119,7 @@ func take_damage():
 	var direction = sign(global_position.x - enemy.global_position.x)
 	velocity.x = direction * knockback_force
 	velocity.y = -knockback_force * 0.5
-
+	move_and_slide()
 	animated_sprite.play("Hurt")
 	await animated_sprite.animation_finished
 
