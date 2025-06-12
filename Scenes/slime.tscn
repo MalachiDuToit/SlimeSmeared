@@ -1,31 +1,28 @@
 [gd_scene load_steps=10 format=3 uid="uid://c7ldqm5yr1m80"]
 
 [ext_resource type="Script" uid="uid://7rq0mwe1g2g4" path="res://Scripts/slime.gd" id="1_aiwxb"]
-[ext_resource type="Texture2D" uid="uid://curoibce4kl8b" path="res://Assets/sprites/slime_green.png" id="1_swwnm"]
 [ext_resource type="PackedScene" uid="uid://cp665kyp2pngy" path="res://Scenes/killzone.tscn" id="2_aiwxb"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_paq7w"]
-atlas = ExtResource("1_swwnm")
-region = Rect2(0, 24, 24, 24)
+[ext_resource type="Texture2D" uid="uid://cotoo628473n6" path="res://Assets/sprites/tronchungo3.png" id="2_paq7w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f4si1"]
-atlas = ExtResource("1_swwnm")
-region = Rect2(24, 24, 24, 24)
+atlas = ExtResource("2_paq7w")
+region = Rect2(0, 0, 43, 51)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5gljc"]
-atlas = ExtResource("1_swwnm")
-region = Rect2(48, 24, 24, 24)
+atlas = ExtResource("2_paq7w")
+region = Rect2(43, 0, 43, 51)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vblni"]
-atlas = ExtResource("1_swwnm")
-region = Rect2(72, 24, 24, 24)
+atlas = ExtResource("2_paq7w")
+region = Rect2(86, 0, 43, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e388w"]
+atlas = ExtResource("2_paq7w")
+region = Rect2(129, 0, 43, 51)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e388w"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_paq7w")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f4si1")
 }, {
@@ -34,6 +31,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vblni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e388w")
 }],
 "loop": true,
 "name": &"default",
@@ -47,9 +47,11 @@ size = Vector2(14, 13)
 script = ExtResource("1_aiwxb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 7)
+scale = Vector2(0.434452, 0.434452)
 sprite_frames = SubResource("SpriteFrames_e388w")
 autoplay = "default"
-frame_progress = 0.819105
+frame_progress = 0.484944
 
 [node name="Killzone" parent="." instance=ExtResource("2_aiwxb")]
 

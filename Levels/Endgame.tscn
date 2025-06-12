@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bi8v1jpubbkmb"]
 
 [ext_resource type="FontFile" uid="uid://b2ekuk6jpqj7e" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="1_bc46a"]
-[ext_resource type="Texture2D" uid="uid://dxelkidwebkx0" path="res://Assets/sprites/TileMaps/Endgame.PNG" id="1_wuudo"]
+[ext_resource type="Texture2D" uid="uid://c5f5okb5m0ieg" path="res://Assets/sprites/20250612_1957_Gothic Game Background_simple_compose_01jxhs2rhhfhjbxgct0747bf5b.png" id="1_wuudo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cob7n"]
 texture = ExtResource("1_wuudo")

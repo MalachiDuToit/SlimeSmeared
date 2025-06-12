@@ -1413,7 +1413,6 @@ zoom = Vector2(4, 4)
 position = Vector2(528, 29)
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-self_modulate = Color(1, 0.337255, 1, 1)
 z_index = -5
 position = Vector2(8.50001, 9)
 scale = Vector2(0.536133, 0.430948)
