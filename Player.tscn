@@ -452,12 +452,11 @@ collision_mask = 3
 script = ExtResource("1_kpjcp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(1, 1, 0, 1)
 position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_cxr5p")
-animation = &"Hurt"
+animation = &"Attack"
 autoplay = "default"
-frame = 4
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 12)
